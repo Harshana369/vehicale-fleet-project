@@ -2,6 +2,7 @@ const Vehicle = require("../models/vehicle");
 
 const addVehicle = async (req, res) => {
   try {
+
     // const {
     //   vehicleID,
     //   vehicleName,
@@ -15,6 +16,7 @@ const addVehicle = async (req, res) => {
 
     // Create a new vehicle
     const newVehicle = await Vehicle.create(req.body);
+
 
     // Respond with the newly created vehicle
     res.status(201).json(newVehicle);

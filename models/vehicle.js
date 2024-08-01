@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     vehicleID: {
       type: DataTypes.STRING,
       allowNull: false,
+
       unique: true,
     },
     vehicleName: {
@@ -25,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     vehicleStatus: {
       type: DataTypes.STRING,
+
     },
   });
   return Vehicle;
