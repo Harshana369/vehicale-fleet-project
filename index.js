@@ -1,10 +1,17 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const db = require("./models");
 const routes = require("./routes");
 
+const vehicleRoutes = require("./routes/vehicleRoutes");
+
+// Middleware
+app.use(bodyParser.json()); // For parsing application/json
 app.use(express.json());
+
 app.use("/api", routes);
+app.use("/vehicle", vehicleRoutes);
 
 db.sequelize
   .sync()

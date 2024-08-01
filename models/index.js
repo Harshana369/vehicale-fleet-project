@@ -17,5 +17,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.User = require("./user")(sequelize, DataTypes); // Example model
+db.Vehicle = require("./vehicle")(sequelize, DataTypes);
 
 module.exports = db;
