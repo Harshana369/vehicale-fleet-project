@@ -4,6 +4,6 @@ const userRoutes = require("./userRoutes");
 const vehicleRoutes = require("./vehicleRoutes");
 
 router.use("/users", userRoutes);
-router.post("/vehicle", vehicleRoutes);
+router.use("/vehicle", vehicleRoutes);
 
 module.exports = router;
