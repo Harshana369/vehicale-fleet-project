@@ -1,21 +1,12 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const config = require("../config/config.json");
-
-const sequelize = new Sequelize(
-  config.development.database,
-  config.development.username,
-  config.development.password,
-  {
-    host: config.development.host,
-    dialect: config.development.dialect,
-  }
-);
+const sequelize = require("../db/connection"); // This imports the sequelize instance
 
 const db = {};
 
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
+db.Sequelize = Sequelize; // Making the Sequelize class available in db object
+db.sequelize = sequelize; // Making the sequelize instance available in db object
 
+// Load models
 db.User = require("./user")(sequelize, DataTypes); // Example model
 
 module.exports = db;

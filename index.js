@@ -1,10 +1,13 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const app = express();
 const db = require("./models");
 const routes = require("./routes");
 
 app.use(express.json());
 app.use("/api", routes);
+
+dotenv.config();
 
 db.sequelize
   .sync()

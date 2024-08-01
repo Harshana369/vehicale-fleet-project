@@ -3,7 +3,7 @@
     "username": "root",
     "password": "harshana1945",
     "database": "vehicale_fleet",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   }
 }
