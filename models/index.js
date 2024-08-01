@@ -8,5 +8,6 @@ db.sequelize = sequelize; // Making the sequelize instance available in db objec
 
 // Load models
 db.User = require("./user")(sequelize, DataTypes); // Example model
+db.Vehicle = require("./vehicle")(sequelize, DataTypes);
 
 module.exports = db;
