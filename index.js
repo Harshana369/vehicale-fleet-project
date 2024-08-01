@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const db = require("./models");
 const routes = require("./routes");
 
-// Middleware
 app.use(bodyParser.json()); // For parsing application/json
 app.use(express.json());
 
