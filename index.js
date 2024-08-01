@@ -5,23 +5,12 @@ const bodyParser = require("body-parser");
 const db = require("./models");
 const routes = require("./routes");
 
-
-const Vehicle = require("./routes/vehicleRoutes");
-
-
-
-
-// Middleware
 app.use(bodyParser.json()); // For parsing application/json
 app.use(express.json());
 
-app.use("/api", routes);
-
-app.use("/vehicle", Vehicle);
+app.use("/api/v1", routes);
 
 dotenv.config();
-
-
 
 db.sequelize
   .sync()
