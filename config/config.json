@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "harshana1945",
+    "password": "admin",
     "database": "vehicale_fleet",
     "host": "localhost",
     "dialect": "mysql"
